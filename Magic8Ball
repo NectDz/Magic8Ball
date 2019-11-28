@@ -1,0 +1,79 @@
+import random
+import time
+
+#Random Choices
+message = ("Indeed","Seems unlikely","Very doubtful","Of course","Without a doubt","Can't say...","No")
+
+# Main section
+
+def main():
+  while True:
+    time.sleep(.1)
+    output = random.choice(message)    
+    print(" Welcome to Kevin's Magic 8 Ball Game")
+    time.sleep(.1)
+    print("              _.-----._")
+    time.sleep(.1)
+    print("           .-'         `-.")
+    print("         .'     _..._     `.")
+    time.sleep(.1)
+    print("        :     .' .-. `.     :")
+    print("       :     :  :   :  :     :")
+    time.sleep(.1)
+    print("      :      :  :   :  :      :")
+    print("      :       `._`-'_.'       :")
+    time.sleep(.1)
+    print("      :       .' .-. `.       :")
+    print("      :      :  :   :  :      :")
+    time.sleep(.1)
+    print("       :     :  :   :  :     :")
+    print("        :     `._`-'_.'     :")
+    time.sleep(.1)
+    print("         `.      '''      .'")
+    print("           `-._       _.-'")
+    time.sleep(.1)
+    print("               `-----'")
+    time.sleep(.1)
+    print("--------------------------------------")
+    time.sleep(.1)
+    # If user did not input a response loop until they say a response
+    while True:
+      ask = input("Ask a question to the Magic 8 Ball for an answer: ")
+      if ask == "":
+        print("--------------------------------------")
+        time.sleep(1)
+        print("Did not get a message try again...")
+        print("--------------------------------------")
+        time.sleep(1)
+      else:
+        break
+    print("--------------------------------------")
+    time.sleep(1)
+    print("The Magic 8 Ball has said: " + output)
+    print("--------------------------------------")
+    stop = input("Do you want to continue? Y/N: ")
+    stop = stop.upper()
+    # Re-roll is choice is Y
+    if stop == 'Y':
+      time.sleep(1)
+      print("--------------------------------------")
+      print("Re-Rolling...")
+      print("--------------------------------------")
+      time.sleep(1)
+      # End if choice is N
+    elif stop == 'N':
+      print("--------------------------------------")
+      time.sleep(1)
+      print("See you again next time! ")
+      break
+      # Re-Roll if choice is nither Y/N is choosen
+    else :
+      print("--------------------------------------")
+      time.sleep(1)
+      print("Didn't understand re-rolling anyway...")
+      print("")
+      time.sleep(1)
+
+main()
+
+
